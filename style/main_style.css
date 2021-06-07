@@ -1,0 +1,292 @@
+:root {
+    --vermelho:#e50914;
+    --preto: #141414;
+    --branco: #fff;
+    --cinza_claro: #e5e5e5;
+    --cinza_medio: #b3b3b3;
+}
+* {
+    font-family: Arial, Times, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;  
+}
+
+/*elementos base*/
+
+body {
+    background-color: var(--preto);
+    font-size: 14px;
+    width: 100%;
+    height: 100vh;
+    color: var(--cinza_claro);
+}
+
+header .main_header {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+    padding: 0 4%;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    transition: background-color ease .4s;
+}
+
+.main_header.scrolled {
+    background-color: rgba(0,0,0);    
+}
+
+.main_header .first_menu {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.netflix_logo a {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    color: var(--vermelho);
+    font-size: 1.8rem;
+}
+
+.primary_navigation {
+    display: flex;
+    justify-content: flex-start;    
+}
+
+.small_navigation {
+    display: none;
+    font-family: Arial, Times, sans-serif;
+    color: var(--cinza_claro);
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 18px;
+    font-size: 1rem;
+    border: transparent;
+}
+
+.small_navigation:focus-visible {
+    outline: none;
+}
+
+.small_navigation option {
+    background: rgba(0, 0, 0, 0.9);   
+}
+
+.main_header .second_menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+}
+
+.secondary_navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: var(--cinza_claro);
+    transition: color .4s;
+    margin-left: 18px;
+    font-size: 0.8rem;
+}
+
+nav a:hover {
+    color: var(--cinza_medio);
+}
+
+nav a:focus {
+    color: var(--cinza_medio);
+}
+
+/*filme em destaque*/
+
+.highlight_movie {
+    position: relative;
+    background: linear-gradient(77deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 85%), url(/img/wallpaper_mandalorian.jpg);
+    background-size: cover;
+    height: 56.25vw;
+    width: 100%;
+    margin-bottom: -95px;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 35%;
+    left: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 45%;
+    color: var(--branco);
+}
+
+.movie_info .movie_title {
+    font-size: 2.2rem;
+}
+
+.movie_info .movie_description {    
+    margin-top: 10px;
+    font-size: 1.1rem;
+    width: 85%;
+}
+
+.botao {
+    border: none;
+    border-radius: 4px;
+    padding: .6rem 1.5rem;
+    background-color: var(--branco);
+    font-size: .9rem;
+    transition: .4s;
+    margin-top: .8rem;
+    margin-right: .3rem;
+    cursor: pointer;
+}
+
+.botao i {
+    margin-right: .5rem;
+}
+
+.botao:nth-child(1):hover {
+    background-color: var(--cinza_medio);    
+}
+
+.botao:nth-child(2) {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: var(--branco);
+}
+
+.botao:nth-child(2):hover {
+    background-color: rgba(109, 109, 110, 0.5);
+}
+
+.highlight_movie .blur {
+    background-image: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+    background-size: 100% 100%;
+    background-position: 0 top;
+    background-color: transparent;
+    width: 100%;
+    height: 10.7vw;
+    top: auto;
+    bottom: -1px;
+    opacity: 1;    
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+/* Carrossel*/
+
+.carousel_title {
+    position: relative;
+    color: var(--cinza_claro);
+    font-size: 1.1rem;
+    margin-left: 4%;
+    margin-bottom: 8px;
+}
+
+.movies_carousel {
+    position: relative;    
+}
+
+.movie_box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.movie_box:hover {
+    cursor: pointer;
+}
+
+.owl-dots {
+    margin-top: 5px; 
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 1100px) {
+    body, html {
+        font-size: 12px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        }
+
+    .highlight_movie {
+        margin-bottom: -60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .primary_navigation {
+        display: none;    
+    }
+    
+    .small_navigation {
+        display: initial;
+    }
+    
+    .highlight_movie {
+        height: 432px;        
+    }    
+}
+
+@media screen and (max-width: 670px) {
+    .highlight_movie {
+        background-position: center;
+    }
+
+    .movie_info .movie_title {
+        font-size: 1.5rem;
+    }
+    
+    .movie_info .movie_description {    
+        margin-top: 5px;
+        font-size: .9rem;
+    }
+
+    .botao {
+        font-size: .7rem;        
+    }
+
+    .botao:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .highlight_movie {
+        margin-bottom: -30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body, html {
+    font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 2380px) {
+    body, html {
+    font-size: 32px;
+    }
+
+    .netflix_logo a {
+    font-size: 32px;
+    }
+
+    nav a {
+    font-size: 0.6rem;
+    }
+}

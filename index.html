@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix</title>
+        <link rel="stylesheet" href="style/main_style.css">
+        
+        <!--owl css-->
+        <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+        <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="main_header">
+                <div class="first_menu">
+                    <div class="netflix_logo">
+                        <a href="#" class="home_button"><b>Netflix</b></a>
+                    </div>
+                    <nav class="primary_navigation">
+                        <a href="#">Início</a>
+                        <a href="#">Séries</a>
+                        <a href="#">Filmes</a>
+                        <a href="#">Bombando</a>
+                        <a href="#">Minha Lista</a>
+                    </nav>
+                    <select class="small_navigation">
+                        <option>Navegar</option>
+                        <option>Início</option>
+                        <option>Séries</option>
+                        <option>Filmes</option>
+                        <option>Bombando</option>
+                        <option>Minha Lista</option>
+                    </select>
+                </div>
+                <div class="second_menu">
+                    <nav class="secondary_navigation">
+                        <a href="#">Buscar</a>
+                        <a href="#">Perfil</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="highlight_movie">
+                <div class="container">
+                    <div class="movie_info">
+                        <h2 class="movie_title">O Mandaloriano</h2>
+                        <p class="movie_description">A saga de um guerreiro solitário, que também é um mercenário e pistoleiro, viajando pelos territórios esquecidos e marginais do espaço, logo após a queda do Império e antes da criação da temida Primeira Ordem.</p>
+                    </div>
+                    <div class="botoes">
+                        <button onclick="redirect('https://www.youtube.com/watch?v=rV-BmMbWEj4&t=2s')" role="button" class="botao">
+                            <i class="fas fa-play"></i>
+                            <b>Assitir</b>
+                        </button>
+                        <button onclick="redirect('https://www.themoviedb.org/tv/82856-the-mandalorian?language=pt-BR')" role="button" class="botao">
+                            <i class="fas fa-info-circle"></i>
+                            <b>Mais informações</b>
+                        </button>                        
+                    </div>
+                </div>
+                <div class="blur"></div>
+            </div>
+        </main>
+        <div class="carousel_title">
+            <p><b>Sugestões para você</b></p>
+        </div>
+        <div class="movies_carousel">
+            <div class="owl-carousel loop owl-theme">
+                <div class="item">
+                    <img class="movie_box" src="img/mini1.jpg" alt="Pôster do filme O Auto da Compadecida">                    
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini2.jpg" alt="Pôster do filme O Fabuloso Destino de Amélie Poulain">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini3.jpg" alt="Pôster do seriado Love Death + Robots ">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini4.jpg" alt="Pôster do filme Homem-Aranha no Aranhaverso">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini5.jpg" alt="Pôster do filme No Limite do Amanhã">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini6.jpg" alt="Pôster do filme Orgulho e Preconceito">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini7.jpg" alt="Pôster do filme Whiplash: Em Busca da Perfeição">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini8.jpg" alt="Pôster do filme Viva: A Vida é uma Festa">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini9.jpg" alt="Pôster do filme Dredd">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini10.jpg" alt="Pôster do filme Questão de Tempo">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini11.jpg" alt="Pôster do filme Soul: Uma Aventura com Alma">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini12.jpg" alt="Pôster do filme Sempre ao seu Lado">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini13.jpg" alt="Pôster do filme Django Livre">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini14.jpg" alt="Pôster do filme Nocaute">
+                </div>
+                <div class="item">
+                    <img class="movie_box" src="img/mini15.jpg" alt="Pôster do filme Raya e o Último Dragão">
+                </div>
+            </div>
+        </div>
+        <div>
+            <script src="https://kit.fontawesome.com/77f3ae9aa8.js" crossorigin="anonymous"></script>
+            <script src="js/owl/jquery.min.js"></script>
+            <script src="js/owl/owl.carousel.min.js"></script>
+            <script src="js/main_js.js"></script>
+        </div>
+    </body>
+    </html>
