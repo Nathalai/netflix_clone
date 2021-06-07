@@ -109,7 +109,7 @@ nav a:focus {
 
 .highlight_movie {
     position: relative;
-    background: linear-gradient(77deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 85%), url(/img/wallpaper_mandalorian.jpg);
+    background: linear-gradient(77deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 85%), url(../img/wallpaper_mandalorian.jpg);
     background-size: cover;
     height: 56.25vw;
     width: 100%;
